@@ -48,7 +48,7 @@ class VAEModele(torch.nn.Module):
         return self.decoder(zs)
 
 
-def sigloss(x_pred):
+def sigloss(x_pred): # used from le-wm repo
     num_proj = 1024
     knots = 17 * 2
     ts = torch.linspace(-3, 3, knots, dtype=torch.float32)
