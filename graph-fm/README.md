@@ -10,6 +10,8 @@ Tested positional encodings:
   - Laplacian eigenvectors
   - Raw indexing
   - Fourier frequencies
+We evaluate the distinction between these methods by overfitting on a sample.
+The results are in output subfolder.
 
 ## TODO
 - Try Graph Attention
