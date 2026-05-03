@@ -7,7 +7,6 @@ Two approaches are explored:
 - Using a VAE (from the `vae` folder)
 - Direct generation in pixel space
 
-Both models have comparable architectures and number of parameters, and are not conditioned on the digit.
 
 ## Results
 - Visually, the VAE-based approach performs significantly better than direct pixel-space generation
@@ -23,6 +22,8 @@ Both models have comparable architectures and number of parameters, and are not 
   <b>Left:</b> Latent space (VAE) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <b>Right:</b> Pixel space
 </p>
 The samples are generated using main.py (for pixel space version) and main_latent.py (for the VAE based version).
+Both models have comparable architectures and number of parameters, they are not conditioned on the digit. They ve been trained during 30 epochs on 60k samples from MNIST dataset.
+We used shifted towards high noise timestep distribution at train and inference time.
 
 ## TODO
 - Compare models using FID scores.
