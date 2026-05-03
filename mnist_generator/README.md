@@ -27,3 +27,4 @@ The samples are generated using main.py (for pixel space version) and main_laten
 ## TODO
 - Compare models using FID scores.
 - Try to vary the beta coefficient of the VAE.
+- Add a digit condition.
