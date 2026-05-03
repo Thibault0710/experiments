@@ -19,8 +19,8 @@ This project compares a standard VAE (`vae.py`) with a VAE trained using a SigRe
   <b>SigReg VAE</b><br>
   <img src="sigreg_var_5e-3/vae_random_samples.png" width="900"/>
 </p>
-> ⚠️ Comparison should be interpreted carefully:  
-> the KL coefficient (β) and the SigReg coefficient (λ) are not directly comparable.
+⚠️ Comparison should be interpreted carefully:  
+the KL coefficient (β) and the SigReg coefficient (λ) are not directly comparable.
 
 ## TODO
 - Add FID metric on generated samples  
