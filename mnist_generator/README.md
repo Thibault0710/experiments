@@ -25,4 +25,5 @@ Both models have comparable architectures and number of parameters, and are not 
 The samples are generated using main.py (for pixel space version) and main_latent.py (for the VAE based version).
 
 ## TODO
-- Compare models using FID scores
+- Compare models using FID scores.
+- Try to vary the beta coefficient of the VAE.
