@@ -15,10 +15,12 @@ Both models have comparable architectures and number of parameters, and are not 
 ### Comparison
 
 **Latent space (VAE):**
-![Latent Space](latent_space/generated.png)
+![Latent Space]
+(latent_space/generated.png)
 
 **Pixel space:**
-![Pixel Space](pixel_space/generated.png)
+![Pixel Space]
+(pixel_space/generated.png)
 
 ## TODO
 - Compare models using FID scores
