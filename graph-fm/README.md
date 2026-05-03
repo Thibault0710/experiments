@@ -38,6 +38,8 @@ Fourier features perform best visually, but are less generalizable than Laplacia
   <b>Fourier</b>
 </p>
 
+Recall: This is an overfitting !
+
 ## TODO
 - Try Graph Attention  
 - Add text conditioning (e.g. UMT5) to generate pixels on a random mesh  
