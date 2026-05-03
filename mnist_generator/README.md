@@ -22,6 +22,6 @@ Both models have comparable architectures and number of parameters, and are not 
 <p align="center">
   <b>Left:</b> Latent space (VAE) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <b>Right:</b> Pixel space
 </p>
-
+The samples are generated using main.py (for pixel space version) and main_latent.py (for the VAE based version).
 ## TODO
 - Compare models using FID scores
