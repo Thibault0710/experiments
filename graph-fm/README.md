@@ -93,21 +93,22 @@ Input (noisy RGB + Cartesian PE)
   enables classifier-free guidance at inference.
 
 ### Training — CIFAR-10
+Training done on RTX 4090 during 12 hours.
 
 | Setting | Value |
 |---|---|
 | Dataset | CIFAR-10, 32 × 32 RGB, 10 classes |
 | Graph | Fixed grid (1 024 nodes) |
 | Model | PGNN — hidden 128 / sdim 512 / 4 DiT blocks / 8 heads |
-| Optimizer | AdamW lr = 3 × 10⁻⁴, gradient accumulation × 4 |
-| Mixed precision | bfloat16 (HuggingFace Accelerate) |
 | EMA | decay = 0.9999 |
 | Sampler | Euler, 10–20 steps, CFG ∈ {1, 3, 5} |
 
 ### Results
 
-**FID ≈ 60** on all 10 classes after 60 k gradient steps (single GPU, compute-limited).  
-Generated images are class-recognizable at this scale.
+**FID(2048) ≈ 60** on all 10 classes after 60 k gradient steps (single GPU, compute-limited).  
+Generated images are class-recognizable at this scale. 
+
+Notice that the model still has reasonable size: 20M params.
 
 <p align="center">
   <img src="outputs/PGNN_outputs/media_images_val_grid_cfg_3.png" width="48%"/>
