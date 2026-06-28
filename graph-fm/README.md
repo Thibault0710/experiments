@@ -107,7 +107,7 @@ Training done on RTX 4090 during 12 hours.
 
 ### Results
 
-**FID(2048) ≈ 60** on all 10 classes after 60 k gradient steps (single GPU, compute-limited).  
+**FID(2048) ≈ 60** on all 10 classes after 60 k gradient steps.  
 Generated images are class-recognizable at this scale. 
 
 Notice that the model still has reasonable size: 20M params.
