@@ -57,7 +57,7 @@ Fourier features perform best visually; Laplacian eigenvectors are more principl
 
 ### Architecture
 
-`PGNN` (Partitioned Graph Neural Network) couples local graph convolutions with global transformer
+We try to introduce `PGNN` (Partitioned Graph Neural Network) couples local graph convolutions with global transformer
 attention through a METIS-based coarsening step.  
 The graph is partitioned into balanced patches with **METIS** before training, making full
 self-attention tractable at high node counts (quadratic cost is paid on patches, not the whole graph).
