@@ -16,6 +16,7 @@ Two lines of experiments:
 
 Images are represented as graph signals on a fixed grid graph.  
 Spatial information is injected by concatenating a positional encoding to each node's input features.
+The model is a mixed of GraphConv and MLP per nodes.
 
 Tested encodings:
 - **None** — no position signal
@@ -50,7 +51,8 @@ Fourier features perform best visually; Laplacian eigenvectors are more principl
 ## 2 · PGNN: Hierarchical GNN + DiT for CIFAR-10
 
 > **Current scope:** nodes are equipped with raw Cartesian (x, y) coordinates and experiments
-> run on a fixed **grid mesh**. Future work will move to **Delaunay meshes** built from
+> run on a fixed **grid mesh**. Regarding the previous ablation we used in a first time fourier cartesian encoding
+> Future work will move to **Delaunay meshes** built from
 > sampled point clouds, enabling generation on arbitrary topologies.
 
 ### Architecture
