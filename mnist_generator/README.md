@@ -25,7 +25,8 @@ The samples are generated using main.py (for pixel space version) and main_laten
 Both models have comparable architectures and number of parameters, they are not conditioned on the digit. They ve been trained during 30 epochs on 60k samples from MNIST dataset.
 We used shifted towards high noise timestep distribution at train and inference time.
 
-My recent experiments suspects the lacks of encoding/decoding convolutions causing this kind of results in pixel space.
+
+My recent experiments suspects the lacks of encoding/decoding convolutions causing this slow connvergence.
 
 ## TODO
 - Compare models using FID scores.
