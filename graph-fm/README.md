@@ -3,7 +3,7 @@
 ## Overview
 
 Research project on **flow matching for graph-structured image generation**.  
-Images are treated as signals on graphs (grid or Delaunay mesh); the model learns a rectified-flow
+Images are treated as signals on graphs (Delaunay mesh created by sampling pixels); the model learns a rectified-flow
 velocity field transporting noise to pixel colors.
 
 Two lines of experiments:
