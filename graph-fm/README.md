@@ -114,8 +114,8 @@ Notice that the model still has reasonable size: 20M params.
 
 <p align="center">
   <img src="outputs/PGNN_outputs/media_images_val_grid_t10.png" width="30%"/>
-  <img src="outputs/PGNN_outputs/media_images_val_grid_cfg_3.png" width="35%"/>
-  <img src="outputs/PGNN_outputs/media_images_val_grid_cfg_5.png" width="35%"/>
+  <img src="outputs/PGNN_outputs/media_images_val_grid_cfg_3.png" width="30%"/>
+  <img src="outputs/PGNN_outputs/media_images_val_grid_cfg_5.png" width="30%"/>
 </p>
 
 <p align="center">
