@@ -119,7 +119,7 @@ Notice that the model still has reasonable size: 20M params.
 </p>
 
 <p align="center">
-  <b>CFG = 3</b> &nbsp;|&nbsp; <b>CFG = 5</b>
+  <b>CFG = 1</b> &nbsp;|&nbsp;<b>CFG = 3</b> &nbsp;|&nbsp; <b>CFG = 5</b>
 </p>
 
 Higher CFG sharpens class features at the cost of sample diversity — a standard fidelity/diversity
