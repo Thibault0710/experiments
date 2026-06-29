@@ -107,8 +107,8 @@ Training done on RTX 4090 during 12 hours.
 
 ### Results
 
-**FID(2048) ≈ 30.7141** on all 10 classes after 60 k gradient steps, with CFG=4 and EMA weight.
-Without the EMA the FID is around **60**.
+**FID(2048) ≈ 26.5304** on all 10 classes after 90 k gradient steps, with CFG=4, using 30 steps and EMA weight.
+Without the EMA the FID is around **50**.
 Generated images are class-recognizable at this scale. 
 
 Notice that the model still has reasonable size: 20M params.
@@ -122,7 +122,7 @@ Notice that the model still has reasonable size: 20M params.
 <p align="center">
   <b>CFG = 1</b> &nbsp;|&nbsp;<b>CFG = 3</b> &nbsp;|&nbsp; <b>CFG = 5</b>
 </p>
-
+Generation with Euler simple scheduler and 10 steps. CFG clearly improves the generation results.
 
 ---
 
