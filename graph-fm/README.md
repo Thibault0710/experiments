@@ -127,8 +127,6 @@ Notice that the model still has reasonable size: 20M params.
 ---
 
 ## TODO
-
-- Full FID sweep (feature = 2048, all classes, n = 5 000) after longer training
-- Text conditioning via T5 (replace class embedding with cross-attention on text tokens)
 - Extend to arbitrary topology (Delaunay mesh instead of fixed grid)
-- Scale model size and compare against pixel-space baselines (DDPM, DiT-S/2)
+- Pass on ImageNet with bigger compute.
+- Text conditioning via T5 (replace class embedding with cross-attention on text tokens)
