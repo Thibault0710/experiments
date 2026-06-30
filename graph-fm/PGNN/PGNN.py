@@ -44,11 +44,11 @@ class PGNN(torch.nn.Module) :
         self.n_sage_blocs_dec  = n_sage_blocs_dec
         self.n_pe_freqs        = n_pe_freqs
         self.n_conv_blocs = n_conv_blocs
-        self.t_emb_dim_conv = self.sdim
+        
 
         self.pe_ = FourierPositionalEncoder(num_frequencies=n_pe_freqs)
         self.sdim = sdim+self.pe_.output_dim
-
+        self.t_emb_dim_conv = self.sdim
         in_ch = 3 + self.pe_.output_dim
 
         # Linear channel pyramids — encoder ramps in_ch -> hdim, decoder ramps hdim -> 3.
@@ -215,11 +215,11 @@ class PGNN(torch.nn.Module) :
                 s_t, sh_t = self.stem_t_mlp_conv[idx](t_proj_conv).chunk(2, dim=-1)   # (B, hdim) each
                 s_m, sh_m = self.meta_mod_mlp[idx](h_meta_flat).chunk(2, dim=-1)      # (M_total, hdim) each
 
+                h_res = h
                 h = self.conv_blocs[2*idx](h, edge_index_intra)
                 h = F.silu(h)
                 h = self.conv_blocs[2*idx + 1](h, batch_vec, modulation=(s_t, sh_t))  # LN with time adaLN
-                h = h * (1 + s_m[membership]) + sh_m[membership]                      # extra per-partition meta adaLN
-                #x += h
+                h = h_res + h * (1 + s_m[membership]) + sh_m[membership]
 
             scores = self.score(torch.cat([h, pos_in_fourier], dim=-1))          # (N, 1)
             weights = scatter_softmax(scores, index=membership)                   # (N, 1), sums to 1 per metanode
